@@ -6,13 +6,13 @@ import org.testng.annotations.Test;
 import pages.LoginPage;
 import pages.SecureAreaPage;
 
-public class LoginTests extends BaseTests {
+public class LoginTest extends BaseTests {
     @Test
     public void testSuccessfulLogin(){
         LoginPage loginPage = homePage.clickFormAuthentication();
         loginPage.setUsernameField("tomsmith");
-        loginPage.setPasswordFieldField("SuperSecretPassword!");
+        loginPage.setPasswordField("SuperSecretPassword!");
         SecureAreaPage secureAreaPage = loginPage.clickLoginButton();
-        Assert.assertTrue(secureAreaPage.getMessage().contains("You logged into a secure area!"),"Incorrect message");
+        Assert.assertTrue(secureAreaPage.getSecureMessage().contains("You logged into a secure area!"),"The message is incorrect");
     }
 }

@@ -7,10 +7,12 @@ public class HomePage {
     // Fields
     private WebDriver driver;
     private By formAuthenticationLink = By.linkText("Form Authentication");
-    //Constructor
+
+    // Constructor
     public HomePage(WebDriver driver){
         this.driver = driver;
     }
+
     // Methods
     public LoginPage clickFormAuthentication(){
         driver.findElement(formAuthenticationLink).click();

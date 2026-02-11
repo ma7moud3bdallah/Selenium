@@ -8,16 +8,18 @@ public class LoginPage {
     private WebDriver driver;
     private By usernameField = By.id("username");
     private By passwordField = By.id("password");
-    private By loginButton = By.cssSelector("#login > button");
+    private By loginButton = By.cssSelector("form[id='login'] > button");
+
     // Constructor
     public LoginPage(WebDriver driver){
         this.driver = driver;
     }
+
     // Methods
     public void setUsernameField(String username){
         driver.findElement(usernameField).sendKeys(username);
     }
-    public void setPasswordFieldField(String password){
+    public void setPasswordField(String password){
         driver.findElement(passwordField).sendKeys(password);
     }
     public SecureAreaPage clickLoginButton(){
