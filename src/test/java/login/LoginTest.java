@@ -9,7 +9,7 @@ import pages.SecureAreaPage;
 public class LoginTest extends BaseTests {
     @Test
     public void testSuccessfulLogin(){
-        LoginPage loginPage = homePage.clickFormAuthentication();
+        LoginPage loginPage = homePage.clickFormAuthenticationLink();
         loginPage.setUsernameField("tomsmith");
         loginPage.setPasswordField("SuperSecretPassword!");
         SecureAreaPage secureAreaPage = loginPage.clickLoginButton();
