@@ -20,7 +20,8 @@ public class DropdownPage {
 
     // Pre-Method
     private Select findDropdownELement(){
-        return new Select(driver.findElement(dropdownLocator));
+        Select dropdownElement = new Select(driver.findElement(dropdownLocator));
+        return dropdownElement;
     }
 
     // Methods

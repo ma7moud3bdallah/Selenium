@@ -26,4 +26,8 @@ public class HomePage {
         clickLink("Dropdown");
         return new DropdownPage(driver);
     }
+    public HoversPage clickHoversLink(){
+        clickLink("Hovers");
+        return new HoversPage(driver);
+    }
 }

@@ -5,8 +5,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.DropdownPage;
 
-import java.util.List;
-
 public class DropdownTest extends BaseTests {
     @Test
     public void testSelectOption(){
