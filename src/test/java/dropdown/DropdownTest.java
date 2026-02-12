@@ -13,6 +13,6 @@ public class DropdownTest extends BaseTests {
         DropdownPage dropdownPage = homePage.clickDropdownLink();
         dropdownPage.selectFromDropdown("Option 1");
         Assert.assertEquals(dropdownPage.getSelectedOptions().size(),1,"Incorrect number of options");
-        Assert.assertTrue(dropdownPage.getSelectedOptions().contains("Option 1"),"The option was not selected");
+        Assert.assertEquals(dropdownPage.getSelectedOptions().get(0),"Option 1","The option was not selected");
     }
 }
