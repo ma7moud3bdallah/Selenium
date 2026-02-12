@@ -18,10 +18,12 @@ public class DropdownPage {
         this.driver = driver;
     }
 
-    // Methods
+    // Pre-Method
     private Select findDropdownELement(){
         return new Select(driver.findElement(dropdownLocator));
     }
+
+    // Methods
     public void selectFromDropdown(String option){
         findDropdownELement().selectByVisibleText(option);
     }

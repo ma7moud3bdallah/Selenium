@@ -12,11 +12,12 @@ public class HomePage {
         this.driver = driver;
     }
 
-    // Methods
+    // Pre-Method
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
 
+    // Methods
     public LoginPage clickFormAuthenticationLink(){
         clickLink("Form Authentication");
         return new LoginPage(driver);
