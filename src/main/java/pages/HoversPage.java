@@ -8,7 +8,7 @@ import org.openqa.selenium.interactions.Actions;
 public class HoversPage {
     // Fields
     private WebDriver driver;
-    private By figureBox = By.cssSelector("div[class='figure']");
+    private By figureCaption= By.cssSelector("div[class='figcaption']");
 
     // Constructor
     public HoversPage(WebDriver driver){
@@ -16,13 +16,22 @@ public class HoversPage {
     }
 
     // Methods
-    public void hoverOverFigure(int index){
+    public FigureCaption hoverOverFigure(int index){
         Actions actions = new Actions(driver);
-        actions.moveToElement(driver.findElements(figureBox).get(index)).perform();
+        actions.moveToElement(driver.findElements(figureCaption).get(index)).perform();
+        return new FigureCaption(driver.findElements(figureCaption).get(index).findElement(figureCaption));
     }
+
+
 
     // Inner class
     public class FigureCaption{
+        // Fields
         private WebElement caption;
+
+        // Constructor
+        public FigureCaption(WebElement caption){
+            this.caption = caption;
+        }
     }
 }
