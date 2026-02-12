@@ -13,7 +13,7 @@ public class HomePage {
     }
 
     // Methods
-    public void clickLink(String linkText){
+    private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
 
