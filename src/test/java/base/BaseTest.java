@@ -6,7 +6,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import pages.HomePage;
 
-public class BaseTests {
+public class BaseTest {
     // Fields
     private WebDriver driver;
     protected HomePage homePage;
@@ -20,6 +20,6 @@ public class BaseTests {
     }
     @AfterClass
     public void tearDown(){
-        driver.quit();
+//        driver.quit();
     }
 }

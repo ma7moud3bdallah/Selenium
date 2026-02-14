@@ -19,17 +19,17 @@ public class DropdownPage {
     }
 
     // Pre-Method
-    private Select findDropdownELement(){
+    private Select findDropdownElement(){
         Select dropdownElement = new Select(driver.findElement(dropdownLocator));
         return dropdownElement;
     }
 
     // Methods
     public void selectFromDropdown(String option){
-        findDropdownELement().selectByVisibleText(option);
+        findDropdownElement().selectByVisibleText(option);
     }
     public List<String> getSelectedOptions(){
-        List<WebElement> selectedElements = findDropdownELement().getAllSelectedOptions();
+        List<WebElement> selectedElements = findDropdownElement().getAllSelectedOptions();
         List<String> selectedOptions = new ArrayList<>();
         for(WebElement element:selectedElements){
             selectedOptions.add(element.getText());

@@ -1,11 +1,11 @@
 package dropdown;
 
-import base.BaseTests;
+import base.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.DropdownPage;
 
-public class DropdownTest extends BaseTests {
+public class DropdownTest extends BaseTest {
     @Test
     public void testSelectOption(){
         DropdownPage dropdownPage = homePage.clickDropdownLink();
