@@ -10,7 +10,7 @@ public class HoversTest extends BaseTest {
     @Test
     public void testHoverOverFigure(){
         HoversPage hoversPage = homePage.clickHoversLink();
-        hoversPage.hoverOverFigure();
+        hoversPage.getCaption();
         Assert.assertTrue(hoversPage.isCaptionDisplayed(),"The caption is not displayed");
         Assert.assertEquals(hoversPage.getName(),"name: user1","The name is incorrect");
         Assert.assertEquals(hoversPage.getLinkText(),"View profile","The link text is incorrect");

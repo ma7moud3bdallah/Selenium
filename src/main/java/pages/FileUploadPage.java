@@ -6,23 +6,24 @@ import org.openqa.selenium.WebDriver;
 public class FileUploadPage {
     // Fields
     private WebDriver driver;
-    private By fileUploadButton = By.id("file-upload");
-    private By fileSubmitButton = By.id("file-submit");
+    private By chooseFileButton = By.id("file-upload");
+    private By uploadButton = By.id("file-submit");
     private By uploadedFile = By.id("uploaded-files");
+
 
     // Constructor
     public FileUploadPage(WebDriver driver){
         this.driver = driver;
     }
-
     // Methods
     public void uploadFile(String absoluteFilePath){
-        driver.findElement(fileUploadButton).sendKeys(absoluteFilePath);
+        driver.findElement(chooseFileButton).sendKeys(absoluteFilePath);
     }
-    public void clickSubmitButton(){
-        driver.findElement(fileSubmitButton).click();
+    public void clickUploadButton(){
+        driver.findElement(uploadButton).click();
     }
-    public String getUploadedFileName(){
+    public String getUploadedFile(){
         return driver.findElement(uploadedFile).getText();
     }
+
 }
