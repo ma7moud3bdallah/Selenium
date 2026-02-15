@@ -7,7 +7,7 @@ import pages.DropdownPage;
 
 public class DropdownTest extends BaseTest {
     @Test
-    public void testSelectOption(){
+    public void testSelectedOption(){
         DropdownPage dropdownPage = homePage.clickDropdownLink();
         dropdownPage.selectFromDropdown("Option 1");
         Assert.assertEquals(dropdownPage.getSelectedOptions().size(),1,"Incorrect number of options");

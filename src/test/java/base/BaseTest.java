@@ -8,7 +8,7 @@ import pages.HomePage;
 
 public class BaseTest {
     // Fields
-    private WebDriver driver;
+    protected WebDriver driver;
     protected HomePage homePage;
 
     // Methods

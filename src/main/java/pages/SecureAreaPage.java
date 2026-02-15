@@ -12,7 +12,6 @@ public class SecureAreaPage {
     public SecureAreaPage(WebDriver driver){
         this.driver = driver;
     }
-
     // Methods
     public String getSecureMessage(){
         return driver.findElement(secureMessage).getText();
