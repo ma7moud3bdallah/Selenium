@@ -38,4 +38,8 @@ public class HomePage {
         driver.findElement(By.linkText("File Upload")).click();
         return new FileUploadPage(driver);
     }
+    public JavaScriptAlertsPage clickJavaScriptAlertsLink(){
+        clickLink("JavaScript Alerts");
+        return new JavaScriptAlertsPage(driver);
+    }
 }
