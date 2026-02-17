@@ -3,7 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class EntryAdPage {
+public class ModalsPage {
     // Fields
     private WebDriver driver;
     private By closeButton = By.xpath("//p[text()='Close']");
@@ -11,7 +11,7 @@ public class EntryAdPage {
     private By link = By.id("restart-ad");
 
     // Constructor
-    public EntryAdPage(WebDriver driver){
+    public ModalsPage(WebDriver driver){
         this.driver = driver;
     }
 

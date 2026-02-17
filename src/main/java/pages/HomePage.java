@@ -42,9 +42,9 @@ public class HomePage {
         clickLink("JavaScript Alerts");
         return new JavaScriptAlertsPage(driver);
     }
-    public EntryAdPage clickEntryAdLink(){
+    public ModalsPage clickEntryAdLink(){
         clickLink("Entry Ad");
-        return new EntryAdPage(driver);
+        return new ModalsPage(driver);
     }
     public FramesPage clickFramesLink(){
         clickLink("Frames");
