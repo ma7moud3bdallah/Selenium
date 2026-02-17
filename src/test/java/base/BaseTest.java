@@ -18,7 +18,7 @@ public class BaseTest {
     public void setup(){
         driver = new ChromeDriver();
         homePage = new HomePage(driver);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
     @BeforeMethod
     public void goHome(){
