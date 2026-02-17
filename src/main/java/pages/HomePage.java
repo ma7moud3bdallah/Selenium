@@ -46,4 +46,8 @@ public class HomePage {
         clickLink("Entry Ad");
         return new EntryAdPage(driver);
     }
+    public FramesPage clickFramesLink(){
+        clickLink("Frames");
+        return new FramesPage(driver);
+    }
 }
