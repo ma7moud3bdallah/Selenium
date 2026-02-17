@@ -6,6 +6,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
+import java.time.Duration;
 
 public class BaseTest {
     // Fields
@@ -17,6 +18,7 @@ public class BaseTest {
     public void setup(){
         driver = new ChromeDriver();
         homePage = new HomePage(driver);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
     @BeforeMethod
     public void goHome(){
