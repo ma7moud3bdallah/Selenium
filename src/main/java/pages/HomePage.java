@@ -42,4 +42,8 @@ public class HomePage {
         clickLink("JavaScript Alerts");
         return new JavaScriptAlertsPage(driver);
     }
+    public EntryAdPage clickEntryAdLink(){
+        clickLink("Entry Ad");
+        return new EntryAdPage(driver);
+    }
 }

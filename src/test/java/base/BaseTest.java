@@ -16,11 +16,11 @@ public class BaseTest {
     @BeforeClass
     public void setup(){
         driver = new ChromeDriver();
+        homePage = new HomePage(driver);
     }
     @BeforeMethod
     public void goHome(){
         driver.get("https://the-internet.herokuapp.com/");
-        homePage = new HomePage(driver);
     }
     @AfterClass
     public void tearDown(){

@@ -19,7 +19,7 @@ public class JavascriptALertsTest extends BaseTest {
         javaScriptAlertsPage.clickConfirmButton();
         Assert.assertEquals(javaScriptAlertsPage.alert_getText(),"I am a JS Confirm","The confirm text is incorrect");
         javaScriptAlertsPage.alert_clickToDismiss();
-        Assert.assertEquals(javaScriptAlertsPage.getResultText(),"You clicked: Ok","Incorrect text");
+        Assert.assertEquals(javaScriptAlertsPage.getResultText(),"You clicked: Cancel","Incorrect text");
     }
     @Test
     public void testPrompt(){
