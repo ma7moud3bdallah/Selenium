@@ -32,6 +32,7 @@ public class DynamicLoadingEx1Page {
 //        }
         //Explicit Wait
 //      WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//      wait.until(ExpectedConditions.invisibilityOfElementLocated(loadingIndicator));
         // Fluent Wait
         FluentWait<WebDriver> wait = new FluentWait<>(driver).withTimeout(Duration.ofSeconds(10)).pollingEvery(Duration.ofSeconds(2)).ignoring(NoSuchElementException.class);
         wait.until(ExpectedConditions.invisibilityOfElementLocated(loadingIndicator));
