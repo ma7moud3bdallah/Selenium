@@ -28,8 +28,7 @@ public class DynamicLoadingEx1Page {
 //            e.printStackTrace();
 //        }
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-//        wait.until(ExpectedConditions.invisibilityOf(driver.findElement(loadingIndicator)));
-        wait.until(ExpectedConditions.visibilityOf(driver.findElement(loadedText)));
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(loadingIndicator));
     }
     public String getLoadedText(){
         return driver.findElement(loadedText).getText();
