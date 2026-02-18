@@ -24,13 +24,16 @@ public class DynamicLoadingEx1Page {
     // Methods
     public void clickStartButton(){
         driver.findElement(startButton).click();
+        //Static Wait
 //        try {
 //            Thread.sleep(10000);
 //        } catch (InterruptedException e) {
 //            e.printStackTrace();
 //        }
-//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10)); //Explicit Wait
-        FluentWait<WebDriver> wait = new FluentWait<>(driver).withTimeout(Duration.ofSeconds(10)).pollingEvery(Duration.ofSeconds(2)).ignoring(NoSuchElementException.class); // Fluent Wait
+        //Explicit Wait
+//      WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        // Fluent Wait
+        FluentWait<WebDriver> wait = new FluentWait<>(driver).withTimeout(Duration.ofSeconds(10)).pollingEvery(Duration.ofSeconds(2)).ignoring(NoSuchElementException.class);
         wait.until(ExpectedConditions.invisibilityOfElementLocated(loadingIndicator));
     }
     public String getLoadedText(){
