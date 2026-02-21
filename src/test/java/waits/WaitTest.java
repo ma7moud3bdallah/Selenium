@@ -11,7 +11,7 @@ public class WaitTest extends BaseTest {
     public void testWait1(){
         DynamicLoadingEx1Page dynamicLoadingEx1Page = homePage.clickDynamicLoadingLink().clickEx1Link();
         dynamicLoadingEx1Page.clickStartButton();
-        Assert.assertEquals(dynamicLoadingEx1Page.getLoadedText(),"Hello World!","The text is incorrect");
+        Assert.assertEquals(dynamicLoadingEx1Page.getLoadedTextWithJS(),"Hello World!","The text is incorrect");
     }
     @Test
     public void testWait2(){
