@@ -8,22 +8,20 @@ public class InfiniteScrollPage {
     // Fields
     private WebDriver driver;
     private By paragraph = By.className("jscroll-added");
+
     // Constructor
     public InfiniteScrollPage(WebDriver driver){
         this.driver = driver;
     }
-    // Methods
 
-    /**
-     * @param index paragraph to scroll to
-     */
+    // Methods
+    public int getNumberOfParagraphs(){
+        return driver.findElements(paragraph).size();
+    }
     public void scrollIntoParagraph(int index){
         JavascriptExecutor js = (JavascriptExecutor)driver;
         while(getNumberOfParagraphs()<index){
             js.executeScript("window.scrollTo(0,document.body.scrollHeight);");
         }
-    }
-    public int getNumberOfParagraphs(){
-        return driver.findElements(paragraph).size();
     }
 }
