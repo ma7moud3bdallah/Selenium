@@ -57,5 +57,8 @@ public class HomePage {
     public LargeAndDeepDomPage clickLargeAndDeepDomLink(){
         clickLink("Large & Deep DOM");
         return new LargeAndDeepDomPage(driver);
+    }public InfiniteScrollPage clickInfiniteScrollLink(){
+        clickLink("Infinite Scroll");
+        return new InfiniteScrollPage(driver);
     }
 }
