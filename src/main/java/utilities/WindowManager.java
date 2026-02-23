@@ -1,6 +1,7 @@
 package utilities;
 
 import org.openqa.selenium.WebDriver;
+import java.util.Set;
 
 public class WindowManager {
     // Fields
@@ -23,5 +24,14 @@ public class WindowManager {
     }
     public void goTo(String url){
         driver.navigate().to(url);
+    }
+    public void switchToTab(String tabTitle){
+        Set<String> windowHandles = driver.getWindowHandles();
+        for(String windowHandle:windowHandles){
+            driver.switchTo().window(windowHandle);
+            if(driver.getTitle().equals(tabTitle)){
+                break;
+            }
+        }
     }
 }
