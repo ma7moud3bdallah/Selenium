@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 public class MultipleWindowPage {
     // Fields
     private WebDriver driver;
-    private By clickHereLink = By.linkText("Click Here");
+    private By clickHereLink = By.xpath("//div[@id='content']//a");
 
     // Constructor
     public MultipleWindowPage(WebDriver driver){
