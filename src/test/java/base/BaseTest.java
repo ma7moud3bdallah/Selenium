@@ -36,8 +36,8 @@ public class BaseTest {
     @AfterMethod
     public void takeScreenshot(ITestResult result){
         if(ITestResult.FAILURE==result.getStatus()){
-            TakesScreenshot camera = (TakesScreenshot)driver;
-            File screenshot = camera.getScreenshotAs(OutputType.FILE);
+            TakesScreenshot sc = (TakesScreenshot)driver;
+            File screenshot = sc.getScreenshotAs(OutputType.FILE);
             try {
                 Files.move(screenshot,new File("resources/screenshots/"+result.getName()+".png"));
             } catch (IOException e) {
