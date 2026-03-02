@@ -21,10 +21,9 @@ public class HoversPage {
 
     // Methods
     public WebElement getCaption(){
-        WebElement figureElement = driver.findElements(figure).get(0);
         Actions actions = new Actions(driver);
-        actions.moveToElement(figureElement).perform();
-        return figureElement.findElement(caption);
+        actions.moveToElement(driver.findElements(figure).get(0)).perform();
+        return driver.findElements(figure).get(0).findElement(caption);
     }
     public boolean isCaptionDisplayed(){
         return getCaption().isDisplayed();
