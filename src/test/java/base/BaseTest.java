@@ -16,7 +16,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
 import utilities.MyListener;
-
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
